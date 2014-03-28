@@ -8,7 +8,7 @@
         showSearch: ko.observable(false),
         categoryId: params.id,
         dataSource: new DevExpress.data.DataSource({
-            pageSize: 10,            
+            pageSize: 20,            
             load: function(loadOptions) {
                 return $.getJSON('http://sampleservices.devexpress.com/api/Products', {
                     categoryId: viewModel.categoryId,
