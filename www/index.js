@@ -18,8 +18,8 @@ $(function() {
           },
 		  {
 			  title: "Camera",
-              action: "#camera",
-              icon: "camera"
+              action: "#about",
+              icon: "info"
 		  }
         ],
         commandMapping: {
