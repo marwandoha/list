@@ -25,15 +25,14 @@ MyApp.products = function (params) {
             }
         })
     };
- 
+    
     ko.computed(function () {
         return viewModel.searchString();
     }).extend({
         throttle: 500
     }).subscribe(function () {
-        viewModel.dataSource.pageIndex(0);
         viewModel.dataSource.load();
     });    
- 
+    
     return viewModel;
-};    
+};
