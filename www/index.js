@@ -15,12 +15,7 @@ $(function() {
               title: "About",
               action: "#about",
               icon: "info"
-          },
-		  {
-			  title: "Camera",
-              action: "#about",
-              icon: "info"
-		  }
+          }
         ],
         commandMapping: {
             "ios-header-toolbar": {
