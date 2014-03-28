@@ -31,6 +31,7 @@
     }).extend({
         throttle: 500
     }).subscribe(function () {
+        viewModel.dataSource.pageIndex(0);
         viewModel.dataSource.load();
     });    
     
