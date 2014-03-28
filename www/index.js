@@ -1,24 +1,23 @@
-﻿(function() {
-    "use strict";
+﻿window.MyApp = {};
 
-    var MyApp = window.MyApp = { };
-    
-    // Uncomment the line below to disable platform-specific look and feel and to use the Generic theme for all devices
-    // DevExpress.devices.current({ platform: "generic" });
-
-    $(function() {
-        MyApp.app = new DevExpress.framework.html.HtmlApplication({
-            namespace: MyApp,
-            
-            navigationType: "navbar",
-            navigation: [
-              {
-                title: "Home",
-                action: "#home",
-                icon: "home"
-              }
-            ],
-			commandMapping: {
+$(function() {
+    MyApp.app = new DevExpress.framework.html.HtmlApplication({
+        namespace: MyApp,
+        
+        navigationType: "navbar",
+        navigation: [
+          {
+            title: "Categories",
+            action: "#home",
+            icon: "home"
+          },
+          {
+              title: "About",
+              action: "#about",
+              icon: "info"
+          }
+        ],
+        commandMapping: {
             "ios-header-toolbar": {
 
                 commands: [
@@ -46,11 +45,7 @@
                 ]
             },
         }
-        });
-	
-        
-        MyApp.app.router.register(":view/:id", { view: "home", id:undefined });
-        MyApp.app.navigate();
     });
-    
-})();
+    MyApp.app.router.register(":view/:id", { view: "home", id: undefined });
+    MyApp.app.navigate();   
+});
