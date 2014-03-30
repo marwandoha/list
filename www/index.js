@@ -4,7 +4,7 @@ $(function() {
     MyApp.app = new DevExpress.framework.html.HtmlApplication({
         namespace: MyApp,
         
-        navigationType: "navbar",
+        navigationType: "slideout",
         navigation: [
           {
             title: "Categories",
@@ -27,7 +27,7 @@ $(function() {
             "android-simple-toolbar": {
                 commands: [
                     { id: "search", location: 'right', showText: false }
-                ]
+        ]
             },
             "tizen-footer-toolbar": {
                 commands: [

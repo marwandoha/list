@@ -1,7 +1,37 @@
 ﻿<div data-options="dxView : { name: 'home', title: 'Home' } " >
+	<!--<div data-bind="dxCommand: { title: 'Create', id: 'create', icon: 'find', action: showOverlay}"></div>-->
+	<div data-bind="dxCommand: { title: 'Create', id: 'create', icon: 'find', action: showPopup}"></div>
     <div class="home-view"  data-options="dxContent : { targetPlaceholder: 'content' } " >
         <div data-bind="dxList: { dataSource: dataSource }">
             <div data-options="dxTemplate : { name: 'item' }" data-bind="text: name, dxAction: '#products/{id}'"></div>
         </div>
     </div>
+	<div data-bind="dxPopup:{visible:popupVisible, fullScreen:true}">
+    <div data-options="dxTemplate:{name: 'title'}">
+        <p>Popup title is <b data-bind="text: popupTitle"></b></p>
+    </div>
+    <div data-options="dxTemplate:{name: 'content'}">
+        <div class="button" data-bind="dxButton: { text: 'Hide popup', clickAction: hidePopup, visible: buttonVisible }"></div>
+        <div class="dx-fieldset">
+		<div class="dx-field">
+                    <div class="dx-field-label">Car Make</div>
+                    <div class="dx-field-value">
+                        <div data-bind="dxAutocomplete: { value: autocomplete.text, dataSource: autocomplete.makes, displayExpr: 'make', placeholder: 'Select car make ...' }"></div>
+                    </div>
+                </div>
+    </div>
+	</div>
+</div>
+	<!--<div id="overlayContainer" data-bind="dxOverlay: { visible: overlayVisible }">
+  <div class="overlayContents">
+      <div class="dx-fieldset">
+                <div class="dx-field">
+                    <div class="dx-field-label">Car Make</div>
+                    <div class="dx-field-value">
+                        <div data-bind="dxAutocomplete: { value: autocomplete.text, dataSource: autocomplete.makes, displayExpr: 'make', placeholder: 'Select car make ...' }"></div>
+                    </div>
+                </div>
+      <div class="button" data-bind="dxButton: { text: 'Hide overlay', clickAction: hideOverlay }"></div>
+	  </div>
+  </div>-->
 </div>
