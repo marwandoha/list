@@ -17,7 +17,7 @@
 				<div class="list" data-bind="dxList: {
   dataSource: store,
   autoPagingEnabled: true,
-  showNextButton: true,
+  showNextButton: false,
   pullRefreshEnabled: true,
   height: '65%'
 }">
@@ -25,7 +25,7 @@
             <div data-options="dxTemplate : { name: 'item' }" data-bind="dxAction: '#products/{CategoryID}'">
 				<div>
 					<div class="product-image-box">
-								<img data-bind="attr: { src: '/img/pagination.png', alt: 'test' }" />
+								<img data-bind="attr: { src: 'http://www.grcea.com/wp-content/uploads/2012/03/bmw-logo.jpg', alt: 'test' }" />
 					</div>
 					<div data-bind="text: CategoryName, dxAction: '#products/{id}'" class="product-name"></div>
 					<div class="product-price"><strong data-bind="text: Description, dxAction: '#products/{id}'"></strong></div>
