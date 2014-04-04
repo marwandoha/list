@@ -21,3 +21,30 @@
   border-color: #E4E4E4;
   background-color:#333333;
 }
+.search-wrapper {
+    margin: 0 0 5px;
+}
+.product-image-box {
+    float: left; 
+    margin-right: 15px;
+}
+.product-image-box img {
+    width: 36px;
+    height: 36px;
+}
+.product-name {
+    white-space: pre-wrap;
+}
+.product-price {
+    font-size: 12px;
+}
+
+.editType-wrapper {
+    margin: 0px 10px;
+}
+
+.list-content {
+    height: 100%;
+}
+
+/* iOS tab height - 44px + 27px */

@@ -4,34 +4,25 @@ $(function() {
     MyApp.app = new DevExpress.framework.html.HtmlApplication({
         namespace: MyApp,
         
-        navigationType: "slideout",
-        navigation: [
-          {
-            title: "Categories",
-            action: "#home",
-            icon: "home"
-          },
-          {
-              title: "About",
-              action: "#about",
-              icon: "info"
-          }
-        ],
+        navigationType: "empty",
         commandMapping: {
             "ios-header-toolbar": {
 
                 commands: [
-                    { id: "search", location: 'right', showText: false }
+                    { id: "search", location: 'right', showText: false },
+					 { id: "back", location: "left" }
                 ]
             },
             "android-simple-toolbar": {
                 commands: [
-                    { id: "search", location: 'right', showText: false }
+                    { id: "search", location: 'right', showText: false },
+					{ id: "back", location: "left" }
         ]
             },
             "tizen-footer-toolbar": {
                 commands: [
-                     { id: "search", location: 'center', showText: false }
+                     { id: "search", location: 'center', showText: false },
+					 { id: "back", location: "left" }
                 ]
             },
             "generic-header-toolbar": {

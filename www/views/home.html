@@ -1,17 +1,40 @@
 ﻿    <script> 
     $(function(){
-      $("#includedContent").load("views/ads.html"); 
+      $("#ads").load("views/ads.html"); 
     });
     </script> 
-<div data-options="dxView : { name: 'home', title: 'Home' } " >
-	<!--<div data-bind="dxCommand: { title: 'Create', id: 'create', icon: 'find', action: showOverlay}"></div>-->
 
-	<div data-bind="dxCommand: { title: 'Create', id: 'create', icon: 'find', action: showPopup}"></div>
+<div data-options="dxView : { name: 'home', title: 'Home' } " >
+	<div data-bind="dxCommand: { title: 'Create', id: 'create', icon: 'find', action: showOverlay}"></div>
+
+	<!--<div data-bind="dxCommand: { title: 'Create', id: 'create', icon: 'find', action: showPopup}"></div>-->
+
     <div class="home-view"  data-options="dxContent : { targetPlaceholder: 'content' } " >
-		<div id="includedContent"></div>
-        <div data-bind="dxList: { dataSource: dataSource }">
-            <div data-options="dxTemplate : { name: 'item' }" data-bind="text: name, dxAction: '#products/{id}'"></div>
+	<div data-bind="dxToolbar: { dataSource: toolbarItems, clickAction: processClick }"></div>
+			<div id="ads"></div>
+				<div id="tabs" data-bind="dxTabs: { items: tabs, selectedIndex: selectedTab }"></div>
+				<div class="list-content">
+				<div class="list" data-bind="dxList: {
+  dataSource: store,
+  autoPagingEnabled: true,
+  showNextButton: true,
+  pullRefreshEnabled: true,
+  height: '65%'
+}">
+        <!--<div class="list-indentation" data-bind="dxList: { dataSource: store, pullRefreshEnabled: true}">-->
+            <div data-options="dxTemplate : { name: 'item' }" data-bind="dxAction: '#products/{CategoryID}'">
+				<div>
+					<div class="product-image-box">
+								<img data-bind="attr: { src: '/img/pagination.png', alt: 'test' }" />
+					</div>
+					<div data-bind="text: CategoryName, dxAction: '#products/{id}'" class="product-name"></div>
+					<div class="product-price"><strong data-bind="text: Description, dxAction: '#products/{id}'"></strong></div>
+					<div align="right"><strong data-bind="text: Globalize.format(1000, 'c2')"></strong></div>
+					<!--<div data-bind="text: CategoryName, dxAction: '#products/{id}'"></div>-->
+				</div>
+			</div>
         </div>
+		</div>
     </div>
 	<div data-bind="dxPopup:{visible:popupVisible, fullScreen:true}">
     <div data-options="dxTemplate:{name: 'title'}">
