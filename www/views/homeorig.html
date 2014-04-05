@@ -1,0 +1,67 @@
+﻿    <script> 
+    $(function(){
+      $("#ads").load("views/ads.html"); 
+    });
+    </script> 
+
+<div data-options="dxView : { name: 'home', title: 'Home' } " >
+	<div data-bind="dxCommand: { title: 'Create', id: 'create', icon: 'find', action: showOverlay}"></div>
+
+	<!--<div data-bind="dxCommand: { title: 'Create', id: 'create', icon: 'find', action: showPopup}"></div>-->
+
+    <div class="home-view"  data-options="dxContent : { targetPlaceholder: 'content' } " >
+	<div data-bind="dxToolbar: { dataSource: toolbarItems, clickAction: processClick }"></div>
+			<div id="ads"></div>
+				<div id="tabs" data-bind="dxTabs: { items: tabs, selectedIndex: selectedTab }"></div>
+				<div class="list-content" data-bind="if: allList.rendered, visible: allList.listVisible">
+				<div class="list" data-bind="dxList: {
+  dataSource: dataSource,
+  autoPagingEnabled: true,
+  showNextButton: false,
+  pullRefreshEnabled: true,
+  height: '70%'
+}">
+        <!--<div class="list-indentation" data-bind="dxList: { dataSource: store, pullRefreshEnabled: true}">-->
+            <div data-options="dxTemplate : { name: 'item' }" data-bind="dxAction: '#products/{CategoryID}'">
+				<div>
+					<div class="product-image-box">
+								<img data-bind="attr: { src: 'http://www.grcea.com/wp-content/uploads/2012/03/bmw-logo.jpg', alt: 'test' }" />
+					</div>
+					<div data-bind="text: CategoryName, dxAction: '#products/{id}'" class="product-name"></div>
+					<div class="product-price"><strong data-bind="text: Description, dxAction: '#products/{id}'"></strong></div>
+					<div align="right"><strong data-bind="text: Globalize.format(1000, 'c2')"></strong></div>
+					<!--<div data-bind="text: CategoryName, dxAction: '#products/{id}'"></div>-->
+				</div>
+			</div>
+        </div>
+		</div>
+    </div>
+	<div data-bind="dxPopup:{visible:popupVisible, fullScreen:true}">
+    <div data-options="dxTemplate:{name: 'title'}">
+        <p>Popup title is <b data-bind="text: popupTitle"></b></p>
+    </div>
+    <div data-options="dxTemplate:{name: 'content'}">
+        <div class="button" data-bind="dxButton: { text: 'Hide popup', clickAction: hidePopup, visible: buttonVisible }"></div>
+        <div class="dx-fieldset">
+		<div class="dx-field">
+                    <div class="dx-field-label">Car Make</div>
+                    <div class="dx-field-value">
+                        <div data-bind="dxAutocomplete: { value: autocomplete.text, dataSource: autocomplete.makes, displayExpr: 'make', placeholder: 'Select car make ...' }"></div>
+                    </div>
+                </div>
+    </div>
+	</div>
+</div>
+	<!--<div id="overlayContainer" data-bind="dxOverlay: { visible: overlayVisible }">
+  <div class="overlayContents">
+      <div class="dx-fieldset">
+                <div class="dx-field">
+                    <div class="dx-field-label">Car Make</div>
+                    <div class="dx-field-value">
+                        <div data-bind="dxAutocomplete: { value: autocomplete.text, dataSource: autocomplete.makes, displayExpr: 'make', placeholder: 'Select car make ...' }"></div>
+                    </div>
+                </div>
+      <div class="button" data-bind="dxButton: { text: 'Hide overlay', clickAction: hideOverlay }"></div>
+	  </div>
+  </div>-->
+</div>

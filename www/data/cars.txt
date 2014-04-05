@@ -1,0 +1,112 @@
+[
+    {
+        "picture": "http://placehold.it/40x40&text=BMW",
+        "price": "$10,292.00",
+        "id": 0,
+        "isSold": false,
+        "year": "1996",
+        "milage": 88002,
+        "guid": "aa750377-ba5c-4527-ba9c-8333bbf53932",
+        "make": "BMW",
+        "isActive": false
+    },
+    {
+        "picture": "http://placehold.it/40x40&text=Mercedes",
+        "price": "$12,621.00",
+        "id": 1,
+        "isSold": false,
+        "year": "2007",
+        "milage": 2080,
+        "guid": "4b637720-3431-4e66-b487-ae48bdadb3e5",
+        "make": "Mercedes",
+        "isActive": false
+    },
+    {
+        "picture": "http://placehold.it/40x40&text=Audi",
+        "price": "$17,039.00",
+        "id": 2,
+        "isSold": true,
+        "year": "1992",
+        "milage": 19553,
+        "guid": "4e24ccee-3ac4-460b-80da-7a5d66346acc",
+        "make": "Audi",
+        "isActive": true
+    },
+    {
+        "picture": "http://placehold.it/40x40&text=Inifnity",
+        "price": "$14,221.00",
+        "id": 3,
+        "isSold": true,
+        "year": "2009",
+        "milage": 6382,
+        "guid": "8ccf5952-caaa-42e8-b795-e39b78f4b3fd",
+        "make": "Infinity",
+        "isActive": false
+    },
+    {
+        "picture": "http://placehold.it/40x40&text=KIA",
+        "price": "$17,020.00",
+        "id": 4,
+        "isSold": false,
+        "year": "2010",
+        "milage": 70127,
+        "guid": "1e455df9-c6d6-4b7d-adf7-1ca7858367e1",
+        "make": "KIA",
+        "isActive": true
+    },
+    {
+        "picture": "http://placehold.it/40x40&text=Chery",
+        "price": "$16,571.00",
+        "id": 5,
+        "isSold": true,
+        "year": "1995",
+        "milage": 7725,
+        "guid": "7fc0e170-8560-42c1-821f-b9a1f74abf2c",
+        "make": "Chery",
+        "isActive": false
+    },
+    {
+        "id": 6,
+        "guid": "666957f6-4334-45d0-b634-2613ab6ab9f5",
+        "make": "Volvo",
+        "year": "2008",
+        "price": "$13,879.00",
+        "milage": 92502,
+        "isSold": false,
+        "isActive": false,
+        "picture": "http://placehold.it/40x40&text=Volvo"
+    },
+    {
+        "id": 7,
+        "guid": "0e229319-fb1a-4bb2-94a1-05b2494cad1c",
+        "make": "Nissan",
+        "year": "2004",
+        "price": "$18,634.00",
+        "milage": 87134,
+        "isSold": false,
+        "isActive": true,
+        "picture": "http://placehold.it/40x40&text=Nissan"
+    },
+    {
+        "id": 8,
+        "guid": "70d65285-657e-4db6-9514-257a37b038d1",
+        "make": "Toyota",
+        "year": "1994",
+        "price": "$19,515.00",
+        "milage": 69583,
+        "isSold": true,
+        "isActive": true,
+        "picture": "http://placehold.it/40x40&text=Toyota"
+    },
+    {
+        "id": 9,
+        "guid": "c99bbe03-8763-43a0-b54f-44aeac60686b",
+        "make": "Porshe",
+        "year": "2009",
+        "price": "$15,490.00",
+        "milage": 47435,
+        "isSold": true,
+        "isActive": false,
+        "picture": "http://placehold.it/40x40&text=Porshe"
+    }
+]

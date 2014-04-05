@@ -37,7 +37,11 @@
   </style>
   <script>
   $(function() {
-    $(".rslides").responsiveSlides();
+    $(".rslides").responsiveSlides({
+		auto:true,
+		speed: 0,
+		timeout: 10000,
+	});
   });
 </script>
   <!--

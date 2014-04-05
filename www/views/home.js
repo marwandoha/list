@@ -1,72 +1,81 @@
 ﻿MyApp.home = function (params) {
-    var viewModel = {
-autocomplete: {
+	var deleteTypes = ["toggle", "slideButton", "slideItem", "swipe", "hold"];
+    var viewModel = 
+	{
+		autocomplete: 
+		{
             text: ko.observable(""),
-            makes : [ 
-  { make: "BMW"},
-  { make: "Audi"}]
+            makes : 
+				[ 
+					{ make: "BMW"},
+					{ make: "Audi"}
+				]
+		},
+		processClick : function () 
+		{
+			DevExpress.ui.notify("The widget has been clicked", "info", 1000);
+		},
+		toolbarItems : 
+		[
+			{ location: 'right', widget: 'button', options: { icon: 'find' } },
+			{ location: 'center', text: 'Home' }
+		],
+		deleteTypes: deleteTypes,
 
-        },
-		store : new DevExpress.data.CustomStore({
-    load: function(loadOptions) {
-        var deferred = $.Deferred();
-        // load data from the remote service
-        $.getJSON("http://sampleservices.devexpress.com/api/Categories").done(function(data) {
- 
-            // perform filtering on the client side
-            var query = DevExpress.data.query(data).filter([ [ "CategoryID", ">=", 1 ], "and", [ "CategoryID", "<=", 7 ]])
-    .sortBy("CategoryID")
-    .thenBy("CategoryID")
-    .select("CategoryName","CategoryID","Description");                
-            if(loadOptions.filter)
-                query = query.filter(loadOptions.filter);
-            deferred.resolve(query.toArray());
-        });
-        return deferred.promise();
-    }})  ,
-		tabs: [
-           { text: "All Cars" },
-           { text: "Company" },
+        deleteType: ko.observable(deleteTypes[0]),
+
+        tabs: [
+		   { text: "All Cars" },
+           { text: "Dealers" }
+           
         ],
-		selectedTab: ko.observable(),
-		 allList: {
-            dataSource: this.store,
-            rendered: ko.observable(false)
-        },
-		companyList: {
-            dataSource: new DevExpress.data.CustomStore({ store: this.store }),
-            rendered: ko.observable(false)
-        },
-		processClick : function () {
-  DevExpress.ui.notify("The widget has been clicked", "info", 1000);
-},
-toolbarItems : [
-  //{ location: 'left', widget: 'button', options: { type: 'back', text: 'Back' }},
-  { location: 'right', widget: 'button', options: { icon: 'plus' } },
-  { location: 'right', widget: 'button', options: { icon: 'find' } },
-  { location: 'center', text: 'Home' }
-]
-       /* dataSource: new DevExpress.data.DataSource({
-            load: function(loadOptions) {
-                return $.getJSON('http://sampleservices.devexpress.com/api/Categories');
-            },
-            map: function(item) {
-                return {
-                    id: item.CategoryID,
-                    name: item.CategoryName,
-					desc: item.Description
-                };
-            }                
-        })*/
-		
-		//utility.executePost(url, {}, function(jsonObj){
-			//jsonObject.users = []
-		//});
-		//dataSource : new DevExpress.data.DataSource("http://sampleservices.devexpress.com/api/Categories"),
-	  
 
+        selectedTab: ko.observable(),
+
+        simpleList: {
+            dataSource: MyApp.db.items ,
+            rendered: ko.observable(false)
+        },
+
+        dealerList: {
+            dataSource: MyApp.db.dealers ,
+            rendered: ko.observable(false),
+            searchQuery: ko.observable().extend({ throttle: 500 })
+        },
+
+        allcarsList: {
+            dataSource: MyApp.db.items ,
+            rendered: ko.observable(false),
+            searchQuery: ko.observable().extend({ throttle: 500 })
+        },
+
+        editEnabled: ko.observable(false),
+
+        editList: function() {
+            viewModel.editEnabled(!viewModel.editEnabled());
+        }
     };
-	$.each(["allList", "companyList"], function(i, list) {
+	popupTitle = "Find";
+	buttonVisible = ko.observable(true);
+	popupVisible = ko.observable(false);
+	showPopup = function () 
+	{
+		popupVisible(true);
+	};
+	hidePopup = function () 
+	{
+		popupVisible(false);
+	};
+	overlayVisible = ko.observable(false);
+	showOverlay = function () 
+	{
+    overlayVisible(true);
+	};
+	hideOverlay = function ()
+	{
+    overlayVisible(false);
+	};
+	    $.each(["allcarsList", "dealerList"], function(i, list) {
         viewModel[list].listVisible = ko.computed(function() {
             return viewModel.selectedTab() === i;
         });
@@ -77,23 +86,29 @@ toolbarItems : [
             if(value === i)
                 viewModel[list].rendered(true);
         });
-		});
-	popupTitle = "Find";
-buttonVisible = ko.observable(true);
-popupVisible = ko.observable(false);
-showPopup = function () {
-  popupVisible(true);
-};
-hidePopup = function () {
-  popupVisible(false);
-};
-overlayVisible = ko.observable(false);
-showOverlay = function () {
-    overlayVisible(true);
-};
-hideOverlay = function () {
-    overlayVisible(false);
-};
-viewModel.selectedTab(0);
+
+        if(i < 2) {
+            viewModel[list].editEnabled = viewModel.editEnabled;
+
+            viewModel[list].editConfig = ko.computed(function() {
+                return {
+                    deleteMode: viewModel.deleteType(),
+                    deleteEnabled: true
+                }
+            });
+        }
+    });
+
+    viewModel.editTitle = ko.computed(function() {
+        return viewModel.editEnabled() ? "Done" : "Edit";
+    });
+
+    viewModel.editButtonVisible = ko.computed(function() {
+        return viewModel.selectedTab() === 0;
+    });
+
+
+
+    viewModel.selectedTab(0);
     return viewModel;
 };

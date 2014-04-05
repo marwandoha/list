@@ -1,0 +1,68 @@
+[
+    {
+        "picture": "http://placehold.it/40x40&text=BMW",
+        "price": "$10,292.00",
+        "id": 0,
+        "isSold": false,
+        "year": "1996",
+        "milage": 88002,
+        "guid": "aa750377-ba5c-4527-ba9c-8333bbf53932",
+        "make": "BMW",
+        "isActive": false
+    },
+    {
+        "picture": "http://placehold.it/40x40&text=Mercedes",
+        "price": "$12,621.00",
+        "id": 1,
+        "isSold": false,
+        "year": "2007",
+        "milage": 2080,
+        "guid": "4b637720-3431-4e66-b487-ae48bdadb3e5",
+        "make": "Mercedes",
+        "isActive": false
+    },
+    {
+        "picture": "http://placehold.it/40x40&text=Audi",
+        "price": "$17,039.00",
+        "id": 2,
+        "isSold": true,
+        "year": "1992",
+        "milage": 19553,
+        "guid": "4e24ccee-3ac4-460b-80da-7a5d66346acc",
+        "make": "Audi",
+        "isActive": true
+    },
+    {
+        "picture": "http://placehold.it/40x40&text=Inifnity",
+        "price": "$14,221.00",
+        "id": 3,
+        "isSold": true,
+        "year": "2009",
+        "milage": 6382,
+        "guid": "8ccf5952-caaa-42e8-b795-e39b78f4b3fd",
+        "make": "Infinity",
+        "isActive": false
+    },
+    {
+        "picture": "http://placehold.it/40x40&text=KIA",
+        "price": "$17,020.00",
+        "id": 4,
+        "isSold": false,
+        "year": "2010",
+        "milage": 70127,
+        "guid": "1e455df9-c6d6-4b7d-adf7-1ca7858367e1",
+        "make": "KIA",
+        "isActive": true
+    },
+    {
+        "picture": "http://placehold.it/40x40&text=Chery",
+        "price": "$16,571.00",
+        "id": 5,
+        "isSold": true,
+        "year": "1995",
+        "milage": 7725,
+        "guid": "7fc0e170-8560-42c1-821f-b9a1f74abf2c",
+        "make": "Chery",
+        "isActive": false
+    }
+]
