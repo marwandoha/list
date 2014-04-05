@@ -14,7 +14,7 @@
 		]
     };
     
-    $.getJSON("/data/cars.txt").done(function(data) {
+    $.getJSON("data/cars.txt").done(function(data) {
         viewModel.name(data[viewModel.id].make);
     });     
     
