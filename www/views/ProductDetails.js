@@ -9,7 +9,7 @@
 			}
 		},
 		toolbarItems : [
-		  { location: 'left', widget: 'button', options: { type: 'back', text: 'Back' }},
+		  { location: 'left', widget: 'button', options: { type: 'back', text: 'Back',clickAction: '#_back' }},
 		  { location: 'center', text: 'View Car' }
 		]
     };

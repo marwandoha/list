@@ -1,5 +1,22 @@
 ﻿MyApp.home = function (params) {
 	var deleteTypes = ["toggle", "slideButton", "slideItem", "swipe", "hold"];
+	menuItemClicked = function (e) {
+    DevExpress.ui.notify(e.itemData + " item clicked", "success", 2000);
+	};
+	searchClicked = function (e) {
+			if(viewModel.selectedTab()==0)
+			{
+			   //MyApp.app.navigate({view: "home", id: undefined});
+			   MyApp.app.navigate({view: "searchcars", id: undefined}); 
+			   //DevExpress.ui.notify("The search from All list has been clicked" , "info", 1000);
+			}
+			if(viewModel.selectedTab()==1)
+			{
+			   //MyApp.app.navigate({view: "home", id: undefined});
+			   MyApp.app.navigate({view: "searchdealers", id: undefined}); 
+			   //DevExpress.ui.notify("The search from All list has been clicked" , "info", 1000);
+			}
+		};
     var viewModel = 
 	{
 		autocomplete: 
@@ -11,14 +28,20 @@
 					{ make: "Audi"}
 				]
 		},
-		processClick : function () 
+		/*processClick : function () 
 		{
-			DevExpress.ui.notify("The widget has been clicked", "info", 1000);
-		},
+			DevExpress.ui.notify("The widget has been clicked" , "info", 1000);
+		},*/
 		toolbarItems : 
 		[
-			{ location: 'right', widget: 'button', options: { icon: 'find' } },
-			{ location: 'center', text: 'Home' }
+			{ location: 'right', widget: 'button', options: { icon: 'find', name: 'search',clickAction: searchClicked} },
+			{ location: 'center', text: 'Home' },
+			{
+			  location: 'right', widget: 'dropDownMenu', options: {
+				  items: ["Sign In"],
+				  itemClickAction: menuItemClicked
+				}
+			}
 		],
 		deleteTypes: deleteTypes,
 
@@ -53,7 +76,7 @@
 
         editList: function() {
             viewModel.editEnabled(!viewModel.editEnabled());
-        }
+        },
     };
 	popupTitle = "Find";
 	buttonVisible = ko.observable(true);

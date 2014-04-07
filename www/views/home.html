@@ -10,7 +10,7 @@
 	<!--<div data-bind="dxCommand: { title: 'Create', id: 'create', icon: 'find', action: showPopup}"></div>-->
 
     <div class="home-view"  data-options="dxContent : { targetPlaceholder: 'content' } " >
-	<div data-bind="dxToolbar: { dataSource: toolbarItems, clickAction: processClick }"></div>
+	<div data-bind="dxToolbar: { dataSource: toolbarItems }"></div>
 	<div id="ads"></div>
 	<div id="tabs" data-bind="dxTabs: { items: tabs, selectedIndex: selectedTab }"></div>
 		<div class="list-content" data-bind="if: dealerList.rendered, visible: dealerList.listVisible">
@@ -27,10 +27,9 @@
             </div>
             <!-- /ko -->
         </div>	
-
         <div class="list-content" data-bind="if: allcarsList.rendered, visible: allcarsList.listVisible">
             <!-- ko with: allcarsList -->
-            <div class="list-indentation" data-bind="dxList: {dataSource: dataSource, searchQuery: searchQuery, autoPagingEnabled: true, showNextButton: false, pullRefreshEnabled: true, height: '65%'}">
+            <div class="list-indentation" data-bind="dxList: {dataSource: dataSource, searchQuery: searchQuery, autoPagingEnabled: true, showNextButton: false, pullRefreshEnabled: true, height: '67%'}">
                 <div data-options="dxTemplate : { name: 'item' } " data-bind="dxAction: '#product-details/{id}'" >
                     <div>
                         <div class="product-image-box">

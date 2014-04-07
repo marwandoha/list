@@ -1,0 +1,11 @@
+<script> 
+    $(function(){
+      $("#ads").load("views/ads.html"); 
+    });
+ </script> 
+ <div data-options="dxView : { name: 'searchcars', title: 'Search Cars' } " >
+ <div data-options="dxContent : { targetPlaceholder: 'content' } " >
+ <div data-bind="dxToolbar: { dataSource: toolbarItems}"></div>
+ <div id="ads"></div>
+     </div>
+</div>

@@ -1,6 +1,12 @@
-﻿<div data-options="dxView : { name: 'product-details', title: 'Product' } " >
+﻿    <script> 
+    $(function(){
+      $("#ads").load("views/ads.html"); 
+    });
+    </script> 
+<div data-options="dxView : { name: 'product-details', title: 'Product' } " >
     <div data-options="dxContent : { targetPlaceholder: 'content' } " >
-	<div data-bind="dxToolbar: { dataSource: toolbarItems, itemClickAction: navItemClicked}"></div>
+	<div data-bind="dxToolbar: { dataSource: toolbarItems}"></div>
+	<div id="ads"></div>
         <div class="dx-fieldset">
             <div class="dx-field">
                 <div class="dx-field-label">Id: </div>
