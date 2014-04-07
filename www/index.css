@@ -2,10 +2,8 @@
 body, 
 #view-port {
     height: 100%;
-	-webkit-transform: translate3d(0px,0px,0px);
 }
 body {
     margin: 0;
     padding: 0;
-	-webkit-transform: translate3d(0px,0px,0px);
 }
