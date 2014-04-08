@@ -44,5 +44,17 @@
             </div>
             <!-- /ko -->
         </div>
+		<div id="popup" data-bind="dxPopup: { height: 'auto' }">
+        <div class="dx-clearfix" data-options="dxTemplate : { name: 'title' } ">
+            <h2>Login</h2>
+        </div>
+        <div data-options="dxTemplate : { name: 'content' } ">
+            <div class="login-form">
+                <div data-bind="dxTextBox: { placeholder: 'Login', value: username }"></div>
+                <div data-bind="dxTextBox: { mode: 'password', placeholder: 'Password', value: password }"></div>                            
+                <div data-bind="dxButton: { text: 'Sign in', clickAction: popup.hidePopup }"></div>
+            </div>
+        </div>
+    </div>
 
 	</div>

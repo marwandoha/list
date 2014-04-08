@@ -45,9 +45,17 @@
 
 .list-content {
     height: 100%;
-		-webkit-transform: translate3d(0px,0px,0px);
+		
 }
 .list-indentation{
-		-webkit-transform: translate3d(0px,0px,0px);
+		
+}
+.dx-viewport .dx-overlay-wrapper .login-form {
+    width: 100%;
+    text-align: center;
+}
+
+.dx-viewport .dx-overlay-wrapper .login-form .dx-textbox {
+    margin-bottom: 7px;
 }
 /* iOS tab height - 44px + 27px */

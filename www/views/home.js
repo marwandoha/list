@@ -3,6 +3,26 @@
 	menuItemClicked = function (e) {
     DevExpress.ui.notify(e.itemData + " item clicked", "success", 2000);
 	};
+	popup= {
+            showPopup: function() {
+                var popup = $("#popup").data("dxPopup");
+                popup.show();
+            },
+            hidePopup: function(e) {
+                var popup = $("#popup").data("dxPopup");
+				popup.hide();
+				if(this.username()=="Marwan" && this.password()=="Doha")
+				{
+					MyApp.app.navigate({view: "searchcars", id: undefined}); 
+					DevExpress.ui.notify("You have been signed in :)" , "success", 1000);
+				}
+				else
+				{
+					DevExpress.ui.notify("Invalide username or password" , "error", 1000);
+				}
+                
+            }
+        },
 	searchClicked = function (e) {
 			if(viewModel.selectedTab()==0)
 			{
@@ -28,6 +48,8 @@
 					{ make: "Audi"}
 				]
 		},
+						username: ko.observable(''),
+						password: ko.observable(''),
 		/*processClick : function () 
 		{
 			DevExpress.ui.notify("The widget has been clicked" , "info", 1000);
@@ -39,7 +61,7 @@
 			{
 			  location: 'right', widget: 'dropDownMenu', options: {
 				  items: ["Sign In"],
-				  itemClickAction: menuItemClicked
+				  itemClickAction: popup.showPopup
 				}
 			}
 		],
