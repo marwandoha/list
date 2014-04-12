@@ -868,7 +868,7 @@
   width: 100%;
   display: table;
   padding: 0;
-  background: #e5e5e5;
+  background: #d40000;
 }
 .dx-theme-android .dx-tabs .dx-indent-wrapper
 {
@@ -1109,7 +1109,7 @@
 {
   margin: 0;
   height: 46px;
-  background: #ddd;
+  background: #d40000;
   color: #323232;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -1122,6 +1122,7 @@
   margin: 0;
   padding-top: 7px;
   padding-bottom: 7px;
+  background: #000000;
 }
 .dx-theme-android .dx-toolbar .dx-toolbar-button .dx-button.dx-state-active
 {
@@ -1146,8 +1147,8 @@
 .dx-theme-android .dx-toolbar .dx-toolbar-label
 {
   font-size: 18px;
-  font-weight: normal;
-  color: #000;
+  font-weight: bold;
+  color: #000000;
   line-height: 42px;
 }
 .dx-theme-android .dx-toolbar.dx-state-disabled .dx-button
