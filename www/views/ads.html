@@ -1,7 +1,8 @@
-  <style>
+<style>
   .ad{
   height: 100px;
   }
+
   .rslides {
   position: relative;
   list-style: none;
@@ -35,37 +36,19 @@
   border: 0;
   }
   </style>
-  <script>
-  $(function() {
-    $(".rslides").responsiveSlides({
-		auto:true,
-		speed: 0,
-		timeout: 10000,
-		random: true
-	});
-  });
-</script>
-  <!--
-  $(".rslides").responsiveSlides({
-  auto: true,             // Boolean: Animate automatically, true or false
-  speed: 500,            // Integer: Speed of the transition, in milliseconds
-  timeout: 4000,          // Integer: Time between slide transitions, in milliseconds
-  pager: false,           // Boolean: Show pager, true or false
-  nav: false,             // Boolean: Show navigation, true or false
-  random: false,          // Boolean: Randomize the order of the slides, true or false
-  pause: false,           // Boolean: Pause on hover, true or false
-  pauseControls: true,    // Boolean: Pause when hovering controls, true or false
-  prevText: "Previous",   // String: Text for the "previous" button
-  nextText: "Next",       // String: Text for the "next" button
-  maxwidth: "",           // Integer: Max-width of the slideshow, in pixels
-  navContainer: "",       // Selector: Where controls should be appended to, default is after the 'ul'
-  manualControls: "",     // Selector: Declare custom pager navigation
-  namespace: "rslides",   // String: Change the default namespace used
-  before: function(){},   // Function: Before callback
-  after: function(){}     // Function: After callback
+
+<script>
+$(document).ready(function(){
+$('.rslides') .cycle({
+fx: 'none', // here change effect to blindX, blindY, blindZ etc 
+speed: 'slow', 
+random: true,
+timeout: 10000 
 });
--->
-  <ul class="rslides">
+}); 
+</script>
+
+<ul class="rslides">
   <li><img class="ad" src="img/example-slide-1.jpg"  alt=""></li>
   <li><img class="ad" src="img/example-slide-2.jpg" alt=""></li>
   <li><img class="ad" src="img/example-slide-3.jpg" alt=""></li>
