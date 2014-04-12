@@ -141,7 +141,7 @@
 
 .dx-theme-ios.dx-version-major-5 .slideout-layout .layout-content,
 .dx-theme-ios.dx-version-major-6 .slideout-layout .layout-content {
-    top: 43px;
+    top: 0px;
 }
 
 .dx-theme-ios.dx-version-major-5 .slideout-layout .view-footer .dx-toolbar,
@@ -248,7 +248,7 @@
     height: 43px;
 }
 .dx-theme-ios.dx-version-major-7 .slideout-layout .layout-content {
-    top: 44px;
+    top: 0px;
     background-color: #EFEFF4;
 }
 
@@ -288,7 +288,7 @@
 }
 
 .dx-theme-android .slideout-layout .layout-content {
-    top: 42px;
+    top: 0px;
 }
 
 .dx-theme-android .slideout-layout .layout-header .dx-toolbar {
@@ -310,7 +310,7 @@
 
 .dx-theme-win8 .slideout-layout .layout-content,
 .dx-theme-win8 .dx-slideout .dx-slideout-item-container .dx-slideout-shield {
-    top: 60px;    
+    top: 0px;    
 }
 
 .dx-theme-win8 .slideout-layout .layout-content.has-toolbar-bottom {
@@ -356,5 +356,5 @@
 }
 
 .dx-theme-generic .slideout-layout .layout-content {
-    top: 47px;
+    top: 0px;
 }

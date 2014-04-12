@@ -37,8 +37,15 @@
 			   //DevExpress.ui.notify("The search from All list has been clicked" , "info", 1000);
 			}
 		};
+		selectedIndex = ko.observable(0);
+		menuVisible = ko.observable(false);
     var viewModel = 
 	{
+		items : [
+				{ text: 'item1', icon: 'plus' },
+				{ text: 'item2', icon: 'plus' },
+				{ text: 'item3', icon: 'plus' }				
+		],
 		autocomplete: 
 		{
             text: ko.observable(""),
@@ -58,12 +65,13 @@
 		[
 			{ location: 'right', widget: 'button', options: { icon: 'find', name: 'search',clickAction: searchClicked} },
 			{ location: 'center', text: 'Home' },
-			{
+			{ location: 'left', template: 'nav-button' }
+			/*{
 			  location: 'right', widget: 'dropDownMenu', options: {
 				  items: ["Sign In"],
 				  itemClickAction: popup.showPopup
 				}
-			}
+			}*/
 		],
 		deleteTypes: deleteTypes,
 

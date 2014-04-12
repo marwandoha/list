@@ -32,6 +32,10 @@
     width: 36px;
     height: 36px;
 }
+.test{
+  border-color: #E4E4E4;
+  background-color:#333333;
+}
 .product-name {
     white-space: pre-wrap;
 }

@@ -4,7 +4,7 @@ $(function() {
     MyApp.app = new DevExpress.framework.html.HtmlApplication({
         namespace: MyApp,
         
-        navigationType: "empty",
+        navigationType: "slideout",
         commandMapping: {
             "ios-header-toolbar": {
 

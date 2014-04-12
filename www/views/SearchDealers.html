@@ -5,7 +5,11 @@
  </script> 
  <div data-options="dxView : { name: 'searchdealers', title: 'Search Dealers' } " >
  <div data-options="dxContent : { targetPlaceholder: 'content' } " >
- <div data-bind="dxToolbar: { dataSource: toolbarItems}"></div>
+ <div class="layout-toolbar" data-bind="dxToolbar: { dataSource: toolbarItems }">
+	<div style="display: none" class="nav-button-item" data-options="dxTemplate : { name: 'nav-button' } ">
+         <div class="nav-button" data-bind="dxButton: { icon: 'menu' ,visible : false}"></div>
+         </div>
+ </div>
  <div id="ads"></div>
      </div>
 </div>

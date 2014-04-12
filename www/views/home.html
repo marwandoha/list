@@ -5,13 +5,19 @@
     </script> 
 
 <div data-options="dxView : { name: 'home', title: 'Home' } " >
-	<div data-bind="dxCommand: { title: 'Create', id: 'create', icon: 'find', action: showOverlay}"></div>
+	<!--<div data-bind="dxCommand: { title: 'Create', id: 'create', icon: 'find', action: showOverlay}"></div>-->
 
 	<!--<div data-bind="dxCommand: { title: 'Create', id: 'create', icon: 'find', action: showPopup}"></div>-->
-
+	
     <div class="home-view"  data-options="dxContent : { targetPlaceholder: 'content' } " >
-	<div data-bind="dxToolbar: { dataSource: toolbarItems }"></div>
+	
+	<div class="layout-toolbar" data-bind="dxToolbar: { dataSource: toolbarItems }">
+				<div style="display: none" class="nav-button-item" data-options="dxTemplate : { name: 'nav-button' } ">
+                    <div class="nav-button" data-bind="dxButton: { icon: 'menu' }"></div>
+                </div>
+	</div>
 	<div id="ads"></div>
+		
 	<div id="tabs" data-bind="dxTabs: { items: tabs, selectedIndex: selectedTab }"></div>
 		<div class="list-content" data-bind="if: dealerList.rendered, visible: dealerList.listVisible">
             <!-- ko with: dealerList -->
@@ -44,6 +50,7 @@
             </div>
             <!-- /ko -->
         </div>
+			
 		<div id="popup" data-bind="dxPopup: { height: 'auto' }">
         <div class="dx-clearfix" data-options="dxTemplate : { name: 'title' } ">
             <h2>Login</h2>

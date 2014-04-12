@@ -1,8 +1,7 @@
 ﻿<div data-options="dxView : { name: 'products', title: 'Products' } " >
     <div data-bind="dxCommand: { id: 'search', title: 'Search', placeholder: 'Search...', icon: 'find', action: find }" ></div>
 	<div data-options="dxContent : { targetPlaceholder: 'content', transition:'slide' } " >
-
-	<div data-bind="dxToolbar: { dataSource: toolbarItems, itemClickAction: navItemClicked}"></div>
+	<div class="layout-toolbar" data-bind="dxToolbar: { dataSource: toolbarItems, itemClickAction: navItemClicked}"></div>
         <div data-bind="dxTextBox: { mode: 'search', value: searchString, visible: showSearch, valueUpdateEvent: 'search change keyup' }"></div>
         <div data-bind="dxList: { dataSource: dataSource }">
             <div data-options="dxTemplate : { name: 'item' }" data-bind="text: name, dxAction: '#product-details/{id}'"></div>
