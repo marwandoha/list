@@ -904,15 +904,15 @@
 }
 .dx-theme-android .dx-tabs .dx-tab-selected
 {
-  -webkit-box-shadow: inset 0 -5px #09c;
-  -moz-box-shadow: inset 0 -5px #09c;
-  -ms-box-shadow: inset 0 -5px #09c;
-  -o-box-shadow: inset 0 -5px #09c;
-  box-shadow: inset 0 -5px #09c;
+  -webkit-box-shadow: inset 0 -5px #8a0808;
+  -moz-box-shadow: inset 0 -5px #8a0808;
+  -ms-box-shadow: inset 0 -5px #8a0808;
+  -o-box-shadow: inset 0 -5px #8a0808;
+  box-shadow: inset 0 -5px #8a0808;
 }
 .dx-theme-android .dx-tabs .dx-tab.dx-state-active
 {
-  background: rgba(44,159,201,.8);
+  background: #8a0808;
   -webkit-box-shadow: inset 0 -1px #09c;
   -moz-box-shadow: inset 0 -1px #09c;
   -ms-box-shadow: inset 0 -1px #09c;
