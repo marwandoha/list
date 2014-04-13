@@ -46,12 +46,24 @@
     top: 42px;
 }
 
-
 .slideout-layout .layout-frame,
 .slideout-layout .layout-frame .layout-header,
 .slideout-layout .layout-frame .layout-header .dx-toolbar {
     border-radius: 4px 4px 0 0;
 }
+.login-form {
+	position:relative;
+	top:200px;
+	right:0px;
+    width: 100%;
+    text-align: center;
+	vertical-align:center;
+	margin-left:auto;
+	margin-right:auto;
+}
+.sigbut{
+	margin-top:20px;
+	}
 
 
 /* navigation */
@@ -84,19 +96,6 @@
     width: 24px;
     height: 24px;
 }
-.login-form {
-	position:absolute;
-	top:240px;
-	right:0px;
-    width: 200px;
-    text-align: center;
-	vertical-align:center;
-	margin-left:auto;
-	margin-right:auto;
-}
-.sigbut{
-	margin-top:20px;
-	}
 
 
 /* iOS */
