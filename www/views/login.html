@@ -1,0 +1,16 @@
+<script>
+    $(function(){
+      $("#ads").load("views/ads.html");
+    });
+ </script>
+ <div data-options="dxView : { name: 'login', title: 'Login Page' } " >
+ <div data-options="dxContent : { targetPlaceholder: 'content' } " >
+ <div data-bind="dxLoadPanel: { message: loadPanelMessage, visible: loadPanelVisible }"></div>
+ <div class="layout-toolbar" data-bind="dxToolbar: { dataSource: toolbarItems }">
+	<div style="display: none" class="nav-button-item" data-options="dxTemplate : { name: 'nav-button' } ">
+         <div class="nav-button" data-bind="dxButton: { icon: 'menu' ,visible : false}"></div>
+         </div>
+ </div>
+ <div id="ads"></div>
+     </div>
+</div>

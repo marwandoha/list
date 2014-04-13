@@ -868,7 +868,7 @@
   width: 100%;
   display: table;
   padding: 0;
-  background: #d40000;
+  background: #d30507;
 }
 .dx-theme-android .dx-tabs .dx-indent-wrapper
 {
@@ -894,7 +894,7 @@
 {
   padding: 8px 10px;
   text-transform: uppercase;
-  color: #000;
+  color: #ffffff;
   font-size: 10px;
   line-height: 10px;
 }
@@ -904,15 +904,15 @@
 }
 .dx-theme-android .dx-tabs .dx-tab-selected
 {
-  -webkit-box-shadow: inset 0 -5px #8a0808;
-  -moz-box-shadow: inset 0 -5px #8a0808;
-  -ms-box-shadow: inset 0 -5px #8a0808;
-  -o-box-shadow: inset 0 -5px #8a0808;
-  box-shadow: inset 0 -5px #8a0808;
+  -webkit-box-shadow: inset 0 -5px #363636;
+  -moz-box-shadow: inset 0 -5px #363636;
+  -ms-box-shadow: inset 0 -5px #363636;
+  -o-box-shadow: inset 0 -5px #363636;
+  box-shadow: inset 0 -5px #363636;
 }
 .dx-theme-android .dx-tabs .dx-tab.dx-state-active
 {
-  background: #8a0808;
+  background: #363636;
   -webkit-box-shadow: inset 0 -1px #09c;
   -moz-box-shadow: inset 0 -1px #09c;
   -ms-box-shadow: inset 0 -1px #09c;
@@ -1109,7 +1109,7 @@
 {
   margin: 0;
   height: 46px;
-  background: #d40000;
+  background: #d30507;
   color: #323232;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -1122,7 +1122,7 @@
   margin: 0;
   padding-top: 7px;
   padding-bottom: 7px;
-  background: #8a0808;
+  background: #363636;
 }
 .dx-theme-android .dx-toolbar .dx-toolbar-button .dx-button.dx-state-active
 {
@@ -1148,7 +1148,7 @@
 {
   font-size: 18px;
   font-weight: bold;
-  color: #000000;
+  color: #ffffff;
   line-height: 42px;
 }
 .dx-theme-android .dx-toolbar.dx-state-disabled .dx-button
@@ -1205,7 +1205,7 @@
 }
 .dx-theme-android .dx-list .dx-list-item.dx-state-active
 {
-  background: rgba(44,159,201,.8);
+  background: #d30507;
 }
 .dx-theme-android .dx-list .dx-list-item.dx-state-disabled
 {

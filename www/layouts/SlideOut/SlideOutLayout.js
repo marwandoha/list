@@ -5,6 +5,8 @@
         NAVIGATION_MAX_WIDTH = 300,
         NAVIGATION_TOGGLE_DURATION = 400;
     DX.framework.html.SlideOutController = DX.framework.html.DefaultLayoutController.inherit({
+		username: ko.observable(''),
+		password: ko.observable(''),
         _getLayoutTemplateName: function() {
             return "slideout"
         },

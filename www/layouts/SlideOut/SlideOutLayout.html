@@ -1,15 +1,9 @@
 ﻿<script type="text/html" id="slideOutMenuItemTemplate">
-    <div data-bind="visible: visible, css: { 'dx-state-disabled': disabled }" data-options="dxTemplate : { name: 'item' } " >
-        <div>
-            <!-- ko if: icon -->
-            <span  data-bind="attr:{ 'class': 'dx-icon dx-icon-' + icon }"></span>
-            <!-- /ko -->
-            <!-- ko if: iconSrc -->
-            <img class="dx-icon" data-bind="attr: { src: iconSrc}" />
-            <!-- /ko -->
-            <div class="dx-navigation-item" data-bind="text: title"></div>
-        </div>
-    </div>
+            <div class="login-form">
+                <div data-bind="dxTextBox: { placeholder: 'Login', value: '',width: '200px' }"></div>
+                <div data-bind="dxTextBox: { mode: 'password', placeholder: 'Password', value: '',width: '200px' }"></div>                            
+                <div class="sigbut" data-bind="dxButton: { text: 'Sign in', clickAction: '#login' }"></div>
+            </div>
 </script>
 
 <div class="slideout-layout dx-black-background" data-options="dxLayout : { name: 'slideout', platform: 'ios' } " >

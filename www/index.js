@@ -5,6 +5,13 @@ $(function() {
         namespace: MyApp,
         
         navigationType: "slideout",
+		 "navigation": [
+            {
+                "id": "Home",
+                "title": "Home",
+                "icon": "home",
+                "location": "navigation"
+            }],
         commandMapping: {
             "ios-header-toolbar": {
 
